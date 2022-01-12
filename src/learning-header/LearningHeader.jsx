@@ -48,6 +48,7 @@ function LearningHeader({
     <Navbar className="learning-header">
       <Container>
         {headerLogo}
+
         <Navbar.Toggle />
 
         <Navbar.Collapse

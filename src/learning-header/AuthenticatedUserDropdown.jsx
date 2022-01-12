@@ -20,7 +20,9 @@ function AuthenticatedUserDropdown({ intl, username }) {
 
   const title = (
     <>
-      <FontAwesomeIcon icon={faUserCircle} className="d-md-none" size="lg" />
+      <span className="text-primary mr-1">
+        <FontAwesomeIcon icon={faUserCircle} size="lg" />
+      </span>
       <span data-hj-suppress className="d-none d-md-inline">
         {username}
       </span>
@@ -35,27 +37,23 @@ function AuthenticatedUserDropdown({ intl, username }) {
         </a>
       </li>
 
-      <li className="nav-item dropdown">
-        <NavDropdown title={title} className="user-dropdown">
-          {dashboardMenuItem}
-          <NavDropdown.Item href={`${getConfig().LMS_BASE_URL}/u/${username}`}>
-            {intl.formatMessage(messages.profile)}
+      <NavDropdown title={title} className="user-dropdown">
+        {dashboardMenuItem}
+        <NavDropdown.Item href={`${getConfig().LMS_BASE_URL}/u/${username}`}>
+          {intl.formatMessage(messages.profile)}
+        </NavDropdown.Item>
+        <NavDropdown.Item href={`${getConfig().LMS_BASE_URL}/account/settings`}>
+          {intl.formatMessage(messages.account)}
+        </NavDropdown.Item>
+        {getConfig().ORDER_HISTORY_URL && (
+          <NavDropdown.Item href={getConfig().ORDER_HISTORY_URL}>
+            {intl.formatMessage(messages.orderHistory)}
           </NavDropdown.Item>
-          <NavDropdown.Item
-            href={`${getConfig().LMS_BASE_URL}/account/settings`}
-          >
-            {intl.formatMessage(messages.account)}
-          </NavDropdown.Item>
-          {getConfig().ORDER_HISTORY_URL && (
-            <NavDropdown.Item href={getConfig().ORDER_HISTORY_URL}>
-              {intl.formatMessage(messages.orderHistory)}
-            </NavDropdown.Item>
-          )}
-          <NavDropdown.Item href={getConfig().LOGOUT_URL}>
-            {intl.formatMessage(messages.signOut)}
-          </NavDropdown.Item>
-        </NavDropdown>
-      </li>
+        )}
+        <NavDropdown.Item href={getConfig().LOGOUT_URL}>
+          {intl.formatMessage(messages.signOut)}
+        </NavDropdown.Item>
+      </NavDropdown>
     </>
   );
 }
