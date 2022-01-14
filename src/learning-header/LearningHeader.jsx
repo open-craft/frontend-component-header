@@ -1,16 +1,16 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
-import { getConfig } from "@edx/frontend-platform";
-import { injectIntl, intlShape } from "@edx/frontend-platform/i18n";
-import { AppContext } from "@edx/frontend-platform/react";
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import { getConfig } from '@edx/frontend-platform';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { AppContext } from '@edx/frontend-platform/react';
 
-import AnonymousUserMenu from "./AnonymousUserMenu";
-import AuthenticatedUserDropdown from "./AuthenticatedUserDropdown";
-import messages from "./messages";
+import AnonymousUserMenu from './AnonymousUserMenu';
+import AuthenticatedUserDropdown from './AuthenticatedUserDropdown';
+import messages from './messages';
 
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 
 function LinkedLogo({ href, src, alt, ...attributes }) {
   return (

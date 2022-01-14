@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
-import { getConfig } from "@edx/frontend-platform";
-import { injectIntl, intlShape } from "@edx/frontend-platform/i18n";
-import { Dropdown } from "@edx/paragon";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { getConfig } from '@edx/frontend-platform';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { Dropdown } from '@edx/paragon';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import messages from "./messages";
+import messages from './messages';
 
 function AuthenticatedUserDropdown({ intl, username }) {
   const dashboardMenuItem = (
