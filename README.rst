@@ -38,7 +38,7 @@ Installation
 
 To install this header into your Open edX micro-frontend, run the following command in your MFE:
 
-``npm i --save @edx/frontend-component-header``
+``npm i --save @opencraft/frontend-component-header``
 
 This will make the component available to be imported into your application.
 
@@ -78,12 +78,12 @@ Build a production distribution::
 .. |Build Status| image:: https://api.travis-ci.com/edx/frontend-component-header.svg?branch=master
    :target: https://travis-ci.com/edx/frontend-component-header
 .. |Codecov| image:: https://img.shields.io/codecov/c/github/edx/frontend-component-header
-   :target: @edx/frontend-component-header
-.. |npm_version| image:: https://img.shields.io/npm/v/@edx/frontend-component-header.svg
-   :target: @edx/frontend-component-header
-.. |npm_downloads| image:: https://img.shields.io/npm/dt/@edx/frontend-component-header.svg
-   :target: @edx/frontend-component-header
-.. |license| image:: https://img.shields.io/npm/l/@edx/frontend-component-header.svg
-   :target: @edx/frontend-component-header
+   :target: @opencraft/frontend-component-header
+.. |npm_version| image:: https://img.shields.io/npm/v/@opencraft/frontend-component-header.svg
+   :target: @opencraft/frontend-component-header
+.. |npm_downloads| image:: https://img.shields.io/npm/dt/@opencraft/frontend-component-header.svg
+   :target: @opencraft/frontend-component-header
+.. |license| image:: https://img.shields.io/npm/l/@opencraft/frontend-component-header.svg
+   :target: @opencraft/frontend-component-header
 .. |semantic-release| image:: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
    :target: https://github.com/semantic-release/semantic-release
