@@ -9,7 +9,7 @@ module.exports = createConfig('webpack-dev', {
   },
   resolve: {
     alias: {
-      '@edx/frontend-component-header': path.resolve(__dirname, 'src'),
+      '@opencraft/frontend-component-header': path.resolve(__dirname, 'src'),
     },
   },
 });
