@@ -31,14 +31,6 @@ const AuthenticatedUserDropdown = ({ intl, username, name }) => {
           <Dropdown.Item href={`${getConfig().ACCOUNT_PROFILE_URL}/u/${username}`}>
             {intl.formatMessage(messages.profile)}
           </Dropdown.Item>
-          <Dropdown.Item href={getConfig().ACCOUNT_SETTINGS_URL}>
-            {intl.formatMessage(messages.account)}
-          </Dropdown.Item>
-          { getConfig().ORDER_HISTORY_URL && (
-            <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
-              {intl.formatMessage(messages.orderHistory)}
-            </Dropdown.Item>
-          )}
           <Dropdown.Item href={getConfig().LOGOUT_URL}>
             {intl.formatMessage(messages.signOut)}
           </Dropdown.Item>
