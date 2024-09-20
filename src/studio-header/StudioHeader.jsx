@@ -28,6 +28,7 @@ const StudioHeader = ({
     title,
     containerProps,
     username: authenticatedUser?.username,
+    name: authenticatedUser?.name,
     isAdmin: authenticatedUser?.administrator,
     authenticatedUserAvatar: authenticatedUser?.avatar,
     studioBaseUrl: isNewHomePage ? '/home' : config.STUDIO_BASE_URL,

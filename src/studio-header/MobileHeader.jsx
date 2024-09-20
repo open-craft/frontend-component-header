@@ -45,6 +45,7 @@ MobileHeader.propTypes = {
   logoAltText: PropTypes.string,
   authenticatedUserAvatar: PropTypes.string,
   username: PropTypes.string,
+  name: PropTypes.string,
   isAdmin: PropTypes.bool,
   mainMenuDropdowns: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
@@ -65,6 +66,7 @@ MobileHeader.defaultProps = {
   title: null,
   authenticatedUserAvatar: null,
   username: null,
+  name: null,
   isAdmin: false,
   mainMenuDropdowns: [],
   outlineLink: null,
