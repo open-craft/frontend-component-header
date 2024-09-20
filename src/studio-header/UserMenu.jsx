@@ -9,6 +9,7 @@ import getUserMenuItems from './utils';
 
 const UserMenu = ({
   username,
+  name,
   studioBaseUrl,
   logoutUrl,
   authenticatedUserAvatar,
@@ -32,7 +33,7 @@ const UserMenu = ({
       data-testid="avatar-icon"
     />
   );
-  const title = isMobile ? avatar : <>{avatar}{username}</>;
+  const title = isMobile ? avatar : <>{avatar}{name || username}</>;
 
   return (
     <NavDropdownMenu
@@ -50,6 +51,7 @@ const UserMenu = ({
 
 UserMenu.propTypes = {
   username: PropTypes.string,
+  name: PropTypes.string,
   studioBaseUrl: PropTypes.string.isRequired,
   logoutUrl: PropTypes.string.isRequired,
   authenticatedUserAvatar: PropTypes.string,
@@ -64,6 +66,7 @@ UserMenu.defaultProps = {
   isAdmin: false,
   authenticatedUserAvatar: null,
   username: null,
+  name: null,
 };
 
 export default injectIntl(UserMenu);
