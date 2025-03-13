@@ -73,7 +73,7 @@
     "@openedx/paragon": "*",
     "prop-types": "^15.5.10",
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
     "react-router-dom": "*"
   }
 }
