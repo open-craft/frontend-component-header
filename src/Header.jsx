@@ -112,6 +112,7 @@ const Header = ({
     logoAltText: config.SITE_NAME,
     logoDestination: `${config.LMS_BASE_URL}/dashboard`,
     loggedIn: authenticatedUser !== null,
+    name: authenticatedUser !== null ? authenticatedUser.name : null,
     username: authenticatedUser !== null ? authenticatedUser.username : null,
     avatar: authenticatedUser !== null ? authenticatedUser.avatar : null,
     mainMenu: getConfig().AUTHN_MINIMAL_HEADER ? [] : mainMenu,

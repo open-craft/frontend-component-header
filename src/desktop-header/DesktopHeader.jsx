@@ -41,6 +41,7 @@ class DesktopHeader extends React.Component {
       userMenu,
       avatar,
       username,
+      name,
       intl,
     } = this.props;
 
@@ -52,7 +53,7 @@ class DesktopHeader extends React.Component {
           className="btn btn-outline-primary d-inline-flex align-items-center pl-2 pr-3"
         >
           <Avatar size="1.5em" src={avatar} alt="" className="mr-2" />
-          {username} <CaretIcon role="img" aria-hidden focusable="false" />
+          {name || username} <CaretIcon role="img" aria-hidden focusable="false" />
         </MenuTrigger>
         <MenuContent className="mb-0 dropdown-menu show dropdown-menu-right pin-right shadow py-2">
           <DesktopUserMenuSlot menu={userMenu} />
@@ -117,21 +118,23 @@ export const desktopHeaderDataShape = {
   logoAltText: PropTypes.string,
   logoDestination: PropTypes.string,
   avatar: PropTypes.string,
+  name: PropTypes.string,
   username: PropTypes.string,
   loggedIn: PropTypes.bool,
 };
 
 DesktopHeader.propTypes = {
   mainMenu: desktopHeaderDataShape.mainMenu,
-  secondaryMenu: desktopHeaderDataShape.secondaryMenumainMenu,
-  userMenu: desktopHeaderDataShape.userMenumainMenu,
-  loggedOutItems: desktopHeaderDataShape.loggedOutItemsmainMenu,
-  logo: desktopHeaderDataShape.logomainMenu,
-  logoAltText: desktopHeaderDataShape.logoAltTextmainMenu,
-  logoDestination: desktopHeaderDataShape.logoDestinationmainMenu,
-  avatar: desktopHeaderDataShape.avatarmainMenu,
-  username: desktopHeaderDataShape.usernamemainMenu,
-  loggedIn: desktopHeaderDataShape.loggedInmainMenu,
+  secondaryMenu: desktopHeaderDataShape.secondaryMenu,
+  userMenu: desktopHeaderDataShape.userMenu,
+  loggedOutItems: desktopHeaderDataShape.loggedOutItems,
+  logo: desktopHeaderDataShape.logo,
+  logoAltText: desktopHeaderDataShape.logoAltText,
+  logoDestination: desktopHeaderDataShape.logoDestination,
+  avatar: desktopHeaderDataShape.avatar,
+  name: desktopHeaderDataShape.name,
+  username: desktopHeaderDataShape.username,
+  loggedIn: desktopHeaderDataShape.loggedIn,
 
   // i18n
   intl: intlShape.isRequired,
@@ -146,6 +149,7 @@ DesktopHeader.defaultProps = {
   logoAltText: null,
   logoDestination: null,
   avatar: null,
+  name: null,
   username: null,
   loggedIn: false,
 };
